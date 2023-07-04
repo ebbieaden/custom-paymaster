@@ -1,0 +1,9 @@
+yarn init -y
+
+yarn add -D typescript ts-node ethers@^5.7.2 zksync-web3 hardhat @matterlabs/hardhat-zksync-solc @matterlabs/hardhat-zksync-deploy @matterlabs/zksync-contracts @openzeppelin/contracts
+
+yarn hardhat compile
+
+yarn hardhat deploy-zksync --script deploy-paymaster.ts
+
+yarn hardhat deploy-zksync --script use-paymaster.ts
